@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DetailedDentist</class>
+ <widget class="QWidget" name="DetailedDentist">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Datailed Info</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icon/Images/DetailedDentistIcon.png</normaloff>:/icon/Images/DetailedDentistIcon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(72, 60, 72);
+font: 12pt &quot;Arial&quot;;
+color: white;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>20</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="photo">
+         <property name="minimumSize">
+          <size>
+           <width>360</width>
+           <height>270</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>360</width>
+           <height>270</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(72, 60, 72);
+font: 12pt &quot;Arial&quot;;
+color: white;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QTextBrowser" name="FirstName"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="LastName"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="Patronymic"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="Years"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="Specialization"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="AboutDentist"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="ContactsDentist"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="Rating"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="WorkExperience"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QTextBrowser" name="NameOfDentistry">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="Address">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="WorkingHours">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="AboutUs">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="ContactsDentistry">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
