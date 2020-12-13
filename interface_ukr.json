@@ -46,5 +46,12 @@
     "SuccessAddComment": "Коментар додано!",
     "ErrorCommentatorName": "Порожнє ім'я коментатора",
     "NullComments": "Твій коментар може стати першим!",
-    "DevelopersText": "<html><head/><body><p align='center' style='color: #F9E689'>Розробники</p><p align='center' >Інтерфейс: Влад Примаков</p><p align='center'>Алгоритми: Єгор Жир </p><p align='center'>Зберігання даних: Олексій Кобяковський</p><p align='center'>Виняткові ситуації: Арсеній Пархоменко</p></body></html>"
+    "DevelopersText": "<html><head/><body><p align='center' style='color: #F9E689'>Розробники</p><p align='center' >Інтерфейс: Влад Примаков</p><p align='center'>Алгоритми: Єгор Жир </p><p align='center'>Зберігання даних: Олексій Кобяковський</p><p align='center'>Виняткові ситуації: Арсеній Пархоменко</p></body></html>",
+    "ShowDentistFromDentistry": "Показати всіх дантистів цієї стоматології",
+    "AllDentists": "Дантистів",
+    "AllSpecializations": "Спеціалізації",
+    "AllDentistry": "Стоматології",
+    "ShowAll": "Показати всі",
+    "ShowDentistFromSpecialization": "Показати всіх дантистів цієї спеціалізації",
+    "Close": "Закрити"
 }

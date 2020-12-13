@@ -42,7 +42,7 @@ void HashTableByNameOfDentistry::search(QString key, QList<Dentist*> *temp)
                    temp->append(arr[id].listOfDentists.at(i));
                 }
             }
-    }
+}
 
 void HashTableByNameOfDentistry::clear()
 {

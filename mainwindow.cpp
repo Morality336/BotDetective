@@ -202,6 +202,11 @@ void MainWindow::OpenInterface(){
         ui->menuHelp->setTitle(interface.object().value("Menu").toString());
         ui->actHelp->setText(interface.object().value("Help").toString());
         ui->actDevelops->setText(interface.object().value("Developers").toString());
+        ui->actionDentistry->setText(interface.object().value("AllDentistry").toString());
+        ui->actionDentists->setText(interface.object().value("AllDentists").toString());
+        ui->actionSpecializations->setText(interface.object().value("AllSpecializations").toString());
+        ui->menuShow_All->setTitle(interface.object().value("ShowAll").toString());
+        ui->actionClose->setText(interface.object().value("Close").toString());
     }
     fileInterface.close();
 }
@@ -466,4 +471,77 @@ void MainWindow::on_actDevelops_triggered()
     Developers *t = new Developers();
     t->SendInterface(interface);
     t->show();
+}
+
+void MainWindow::on_actionDentists_triggered()
+{
+    QList<Dentist*> temp;
+    hashTableByName.searchAll(&temp);
+    sort(&temp);
+    ShowDentist(&temp);
+}
+
+void MainWindow::on_actionDentistry_triggered()
+{
+    QVBoxLayout *VLayout = new QVBoxLayout;
+    QWidget* scrollAreaContent = new QWidget;
+    ui->scrollArea->setWidget(scrollAreaContent);
+            for(int i = 0; i < listDentistry.size();i++){
+                QVBoxLayout *DentistryInfo = new QVBoxLayout;
+                QPushButton *ShowDentistFromDentistry = new QPushButton(interface.object().value("ShowDentistFromDentistry").toString());
+                ShowDentistFromDentistry->setStyleSheet("color: black; background-color: rgb(199, 199, 199); font: 14pt;");
+                ShowDentistFromDentistry->setMaximumWidth(375);
+                QTextBrowser *Info = new QTextBrowser;
+                DentistryInfo->setAlignment(Qt::AlignCenter);
+                Info->append(interface.object().value("NameOfDentistry").toString() + ": " + listDentistry.at(i)->getNameOfDentistry());
+                Info->append( interface.object().value("WorkingHours").toString() + ": " + listDentistry.at(i)->getWorkingHours());
+                Info->append(interface.object().value("Address").toString() + ": " + listDentistry.at(i)->getAddress());
+                Info->append(interface.object().value("AboutUs").toString() + ": " + listDentistry.at(i)->getAboutUs());
+                Info->append(interface.object().value("ContactsDentistry").toString() + ": " + listDentistry.at(i)->getContactsDentistry());
+                Info->setFixedHeight(250);
+                DentistryInfo->setContentsMargins(0,10,0,10);
+                DentistryInfo->addWidget(Info);
+                DentistryInfo->addWidget(ShowDentistFromDentistry);
+                QString tmp = listDentistry.at(i)->getNameOfDentistry();
+                connect(ShowDentistFromDentistry, &QPushButton::clicked, [this, tmp](){ this->SendShowDentistFromDentistry(tmp); });
+                VLayout->addLayout(DentistryInfo);
+         }
+    scrollAreaContent->setLayout(VLayout);
+}
+
+void MainWindow::SendShowDentistFromDentistry(QString temp){
+    SearchByDentistry(temp);
+}
+
+void MainWindow::on_actionSpecializations_triggered()
+{
+    QVBoxLayout *VLayout = new QVBoxLayout;
+    QWidget* scrollAreaContent = new QWidget;
+    ui->scrollArea->setWidget(scrollAreaContent);
+            for(int i = 0; i < specialization.size();i++){
+                QVBoxLayout *DentistryInfo = new QVBoxLayout;
+                QPushButton *ShowDentistFromSpecialization = new QPushButton(interface.object().value("ShowDentistFromSpecialization").toString());
+                ShowDentistFromSpecialization->setStyleSheet("color: black; background-color: rgb(199, 199, 199); font: 14pt;");
+                ShowDentistFromSpecialization->setMaximumWidth(375);
+                QTextBrowser *Info = new QTextBrowser;
+                DentistryInfo->setAlignment(Qt::AlignCenter);
+                Info->append(specialization.at(i).first);
+                Info->setMaximumHeight(50);
+                DentistryInfo->setContentsMargins(0,10,0,10);
+                DentistryInfo->addWidget(Info);
+                DentistryInfo->addWidget(ShowDentistFromSpecialization);
+                QString tmp = specialization.at(i).first;
+                connect(ShowDentistFromSpecialization, &QPushButton::clicked, [this, tmp](){ this->SendShowDentistFromSpecialization(tmp); });
+                VLayout->addLayout(DentistryInfo);
+         }
+    scrollAreaContent->setLayout(VLayout);
+}
+
+void MainWindow::SendShowDentistFromSpecialization(QString temp){
+    SearchBySpecialization(temp);
+}
+
+void MainWindow::on_actionClose_triggered()
+{
+    QApplication::quit();
 }

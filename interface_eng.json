@@ -46,5 +46,12 @@
     "SuccessAddComment": "Comment added!",
     "ErrorCommentatorName": "Empty commentator name",
     "NullComments": "Your comment can be the first!",
-    "DevelopersText": "<html><head/><body><p align='center' style='color: #F9E689'>Developers</p><p align='center' >Interface: Vlad Primakov</p><p align='center'>Algorithms: Egor Zhir </p><p align='center'>Вata storage: Alexey Kobyakovsky</p><p align='center'>Exceptional situations: Arseny Parkhomenko</p></body></html>"
+    "DevelopersText": "<html><head/><body><p align='center' style='color: #F9E689'>Developers</p><p align='center' >Interface: Vlad Primakov</p><p align='center'>Algorithms: Egor Zhir </p><p align='center'>Вata storage: Alexey Kobyakovsky</p><p align='center'>Exceptional situations: Arseny Parkhomenko</p></body></html>",
+    "ShowDentistFromDentistry": "Show dentists from this dentistry",
+    "AllDentists": "Dentists",
+    "AllSpecializations": "Specializations",
+    "AllDentistry": "Dentistry",
+    "ShowAll": "Show all",
+    "ShowDentistFromSpecialization": "Show dentist from this specialization",
+    "Close": "Close"
 }

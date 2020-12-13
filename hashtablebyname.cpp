@@ -41,7 +41,17 @@ void HashTableByName::search(QString key, QList<Dentist*> *temp)
                    temp->append(arr[id].listOfDentists.at(i));
                 }
             }
+}
+void HashTableByName::searchAll(QList<Dentist*> *tmp){
+    for(int i = 0; i < size; i++){
+        if(arr[i].listOfDentists.size() != 0){
+            for(int j = 0; j < arr[i].listOfDentists.size(); j++){
+             tmp->append(arr[i].listOfDentists.at(j));
+            }
+        }
     }
+}
+
 void HashTableByName::clear()
 {
     for(int i = 0; i < size; i++)

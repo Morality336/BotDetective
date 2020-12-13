@@ -18,6 +18,7 @@ public:
     ~HashTableByName();
     void push(Dentist* currentOfDentist);
     void search(QString key, QList<Dentist*> *tmp);
+    void searchAll(QList<Dentist*> *tmp);
     void clear();
 private:
     Node* arr;

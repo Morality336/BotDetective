@@ -51,6 +51,8 @@ public:
 public slots:
          void SendDetailed(Dentist* temp);
          void SendComments(Dentist* temp);
+         void SendShowDentistFromDentistry(QString temp);
+         void SendShowDentistFromSpecialization(QString temp);
 private slots:
     void on_Send_clicked();
     void on_actHelp_triggered();
@@ -60,6 +62,14 @@ private slots:
     void on_actionUkr_triggered();
 
     void on_actDevelops_triggered();
+
+    void on_actionDentists_triggered();
+
+    void on_actionDentistry_triggered();
+
+    void on_actionSpecializations_triggered();
+
+    void on_actionClose_triggered();
 
 private:
     Ui::MainWindow *ui;

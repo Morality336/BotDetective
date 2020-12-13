@@ -166,6 +166,7 @@ font: 14pt &quot;Arial&quot;;</string>
     </property>
     <addaction name="actHelp"/>
     <addaction name="actDevelops"/>
+    <addaction name="actionClose"/>
    </widget>
    <widget class="QMenu" name="menuLanguage">
     <property name="title">
@@ -174,8 +175,17 @@ font: 14pt &quot;Arial&quot;;</string>
     <addaction name="actionEng"/>
     <addaction name="actionUkr"/>
    </widget>
+   <widget class="QMenu" name="menuShow_All">
+    <property name="title">
+     <string>Show all</string>
+    </property>
+    <addaction name="actionDentists"/>
+    <addaction name="actionSpecializations"/>
+    <addaction name="actionDentistry"/>
+   </widget>
    <addaction name="menuHelp"/>
    <addaction name="menuLanguage"/>
+   <addaction name="menuShow_All"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actHelp">
@@ -196,6 +206,26 @@ font: 14pt &quot;Arial&quot;;</string>
   <action name="actionUkr">
    <property name="text">
     <string>Українська</string>
+   </property>
+  </action>
+  <action name="actionDentists">
+   <property name="text">
+    <string>Dentists</string>
+   </property>
+  </action>
+  <action name="actionSpecializations">
+   <property name="text">
+    <string>Specializations</string>
+   </property>
+  </action>
+  <action name="actionDentistry">
+   <property name="text">
+    <string>Dentistry</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
    </property>
   </action>
  </widget>
