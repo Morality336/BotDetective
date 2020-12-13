@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>Images/WindowIcon.png</file>
+        <file>Images/HelpIcon.png</file>
+        <file>Images/DetailedDentistIcon.png</file>
+        <file>Images/CommentsDentistIcon.png</file>
+        <file>Images/DevelopersIcon.png</file>
+    </qresource>
+</RCC>
