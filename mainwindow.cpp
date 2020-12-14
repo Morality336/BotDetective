@@ -15,10 +15,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    pathFileDentist = "dentist_eng.json";
-    pathFileDentistry = "dentistry_eng.json";
-    pathFileSpec = "spec_eng.json";
-    pathInterface = "interface_eng.json";
+    pathFileDentist = "../BotDetective/Date/dentist_eng.json";
+    pathFileDentistry = ":/Date/Date/dentistry_eng.json";
+    pathFileSpec = ":/Date/Date/spec_eng.json";
+    pathInterface = ":/Date/Date/interface_eng.json";
     OpenInterface();
     OpenSpec();
     OpenDentistry();
@@ -334,7 +334,7 @@ void MainWindow::ShowDentist(QList<Dentist*> *temp)
             for(int i = 0; i < temp->size();i++){
                 QVBoxLayout *DentistInfo = new QVBoxLayout;
                 QHBoxLayout *HLayout = new QHBoxLayout;
-                QPixmap pix("ImageDentists/" + temp->at(i)->getPhoto());
+                QPixmap pix(":/Images/ImageDentists/ImageDentists/" + temp->at(i)->getPhoto());
 
                 QLabel *Icon = new QLabel;
                 QPushButton *detailed = new QPushButton(interface.object().value("Detailed").toString());
@@ -343,7 +343,7 @@ void MainWindow::ShowDentist(QList<Dentist*> *temp)
                 comments->setStyleSheet("color: black; background-color: rgb(199, 199, 199); font: 14pt;");
                 if (pix.isNull())
                 {
-                    QPixmap noAvatarPix("ImageDentists/no-avatar.PNG");
+                    QPixmap noAvatarPix(":/Images/ImageDentists/ImageDentists/no-avatar.PNG");
                     Icon->setPixmap(noAvatarPix.scaled(240,180));
                 }
                 else
@@ -402,10 +402,10 @@ void MainWindow::on_actionEng_triggered()
     SaveDentist();
     QLabel *tmp = new QLabel();
     ui->scrollArea->setWidget(tmp);
-    pathFileDentist = "dentist_eng.json";
-    pathFileDentistry = "dentistry_eng.json";
-    pathFileSpec = "spec_eng.json";
-    pathInterface = "interface_eng.json";
+    pathFileDentist = "../BotDetective/Date/dentist_eng.json";
+    pathFileDentistry = ":/Date/Date/dentistry_eng.json";
+    pathFileSpec = ":/Date/Date/spec_eng.json";
+    pathInterface = ":/Date/Date/interface_eng.json";
     OpenInterface();
     OpenSpec();
     OpenDentistry();
@@ -417,10 +417,10 @@ void MainWindow::on_actionUkr_triggered()
     SaveDentist();
     QLabel *tmp = new QLabel();
     ui->scrollArea->setWidget(tmp);
-    pathFileDentist = "dentist_ukr.json";
-    pathFileDentistry = "dentistry_ukr.json";
-    pathFileSpec = "spec_ukr.json";
-    pathInterface = "interface_ukr.json";
+    pathFileDentist = "../BotDetective/Date/dentist_ukr.json";
+    pathFileDentistry = ":/Date/Date/dentistry_ukr.json";
+    pathFileSpec = ":/Date/Date/spec_ukr.json";
+    pathInterface = ":/Date/Date/interface_ukr.json";
     OpenInterface();
     OpenSpec();
     OpenDentistry();
@@ -429,7 +429,7 @@ void MainWindow::on_actionUkr_triggered()
 
 void MainWindow::SaveDentist(){
     QFile fileDentist(pathFileDentist);
-    if(!fileDentist.open(QIODevice::WriteOnly|QFile::Text)){
+    if(!fileDentist.open(QIODevice::WriteOnly | QFile::Text)){
         QMessageBox::warning(0, "Error", "Failed to open " + pathFileDentist);
     }
     else
@@ -462,8 +462,9 @@ void MainWindow::SaveDentist(){
         toWrite.append(json);
         newDateDentist.setArray(toWrite);
         }
-        fileDentist.write("{\"Doctors\":"+newDateDentist.toJson()+"}");
+        fileDentist.write("{\"Doctors\":" + newDateDentist.toJson()+"}");
     }
+    fileDentist.close();
 }
 
 void MainWindow::on_actDevelops_triggered()

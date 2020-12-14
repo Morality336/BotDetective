@@ -27,7 +27,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
-    <normaloff>:/icon/Images/CommentsDentistIcon.png</normaloff>:/icon/Images/CommentsDentistIcon.png</iconset>
+    <normaloff>:/Images/Icon/Icons/CommentsDentistIcon.png</normaloff>:/Images/Icon/Icons/CommentsDentistIcon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(72, 60, 72);

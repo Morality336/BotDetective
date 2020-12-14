@@ -14,10 +14,10 @@ DetailedDentist::~DetailedDentist()
 }
 
 void DetailedDentist::sendDentist(Dentist* temp, QJsonDocument &interface){
-    QPixmap pix("ImageDentists/" + temp->getPhoto());
+    QPixmap pix(":/Images/ImageDentists/ImageDentists/" + temp->getPhoto());
     if (pix.isNull())
     {
-       QPixmap noAvatarPix("ImageDentists/no-avatar.PNG");
+       QPixmap noAvatarPix(":/Images/ImageDentists/ImageDentists/no-avatar.PNG");
        ui->photo->setPixmap(noAvatarPix.scaled(360,270));
     }
     else
