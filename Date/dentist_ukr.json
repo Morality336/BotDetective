@@ -3,14 +3,14 @@
         "aboutDentist": "вузький спеціаліст",
         "comments": [
         ],
-        "contactsDentis": "+380684666689",
-        "firstName": "Ян",
+        "contactsDentis": "+380506519977",
+        "firstName": "Валентина",
         "idOfDentistry": 1,
-        "lastName": "Казімов",
-        "patronymic": "Іванович",
-        "photo": "Kazimov.PNG",
-        "specialization": "Стоматолог-ортопед",
-        "workExperience": 0,
+        "lastName": "Раева",
+        "patronymic": "Іванова",
+        "photo": "Raeva.PNG",
+        "specialization": "Стоматолог-терапевт",
+        "workExperience": 5,
         "years": 40
     },
     {
@@ -31,14 +31,14 @@
         "aboutDentist": "вузький спеціаліст",
         "comments": [
         ],
-        "contactsDentis": "+380506519977",
-        "firstName": "Валентина",
+        "contactsDentis": "+380684666689",
+        "firstName": "Ян",
         "idOfDentistry": 1,
-        "lastName": "Раева",
-        "patronymic": "Іванова",
-        "photo": "Raeva.PNG",
-        "specialization": "Стоматолог-терапевт",
-        "workExperience": 5,
+        "lastName": "Казімов",
+        "patronymic": "Іванович",
+        "photo": "Kazimov.PNG",
+        "specialization": "Стоматолог-ортопед",
+        "workExperience": 0,
         "years": 40
     },
     {
@@ -74,23 +74,9 @@
         "aboutDentist": "вузький спеціаліст",
         "comments": [
         ],
-        "contactsDentis": "+380950174792",
-        "firstName": "Вікторія",
-        "idOfDentistry": 4,
-        "lastName": "Терентіва",
-        "patronymic": "Олегівна",
-        "photo": "Terentiva.PNG",
-        "specialization": "Стоматолог-пародонтолог",
-        "workExperience": 7,
-        "years": 40
-    },
-    {
-        "aboutDentist": "вузький спеціаліст",
-        "comments": [
-        ],
         "contactsDentis": "+380950174772",
         "firstName": "Оксана",
-        "idOfDentistry": 1,
+        "idOfDentistry": 4,
         "lastName": "Бедран",
         "patronymic": "Юріївна",
         "photo": "Bedran.PNG",
@@ -102,14 +88,33 @@
         "aboutDentist": "вузький спеціаліст",
         "comments": [
         ],
-        "contactsDentis": "+380508519977",
-        "firstName": "Куземка",
-        "idOfDentistry": 3,
-        "lastName": "Деніс",
-        "patronymic": "Іванович",
-        "photo": "Kuzemka.PNG",
+        "contactsDentis": "+380950174992",
+        "firstName": "Сергій",
+        "idOfDentistry": 1,
+        "lastName": "Головко",
+        "patronymic": "Юрійович",
+        "photo": "Golovko.PNG",
         "specialization": "Стоматолог-ортопед",
-        "workExperience": 5,
+        "workExperience": 15,
+        "years": 40
+    },
+    {
+        "aboutDentist": "вузький спеціаліст",
+        "comments": [
+            {
+                "comment": "Класний лікар",
+                "commentatorName": "Олег Даб",
+                "rating": 3
+            }
+        ],
+        "contactsDentis": "+380950564772",
+        "firstName": "Анастасія",
+        "idOfDentistry": 3,
+        "lastName": "Стебенева",
+        "patronymic": "Олеговна",
+        "photo": "Stebeneva.PNG",
+        "specialization": "Дитячий стоматолог",
+        "workExperience": 7,
         "years": 40
     },
     {
@@ -129,20 +134,15 @@
     {
         "aboutDentist": "вузький спеціаліст",
         "comments": [
-            {
-                "comment": "Класний лікар",
-                "commentatorName": "Олег Даб",
-                "rating": 3
-            }
         ],
-        "contactsDentis": "+380950564772",
+        "contactsDentis": "+380509519977",
         "firstName": "Анастасія",
         "idOfDentistry": 4,
-        "lastName": "Стебенева",
-        "patronymic": "Олеговна",
-        "photo": "Stebeneva.PNG",
-        "specialization": "Дитячий стоматолог",
-        "workExperience": 7,
+        "lastName": "Довбуш",
+        "patronymic": "Іванова",
+        "photo": "Dovbush.PNG",
+        "specialization": "Стоматолог-ортопед",
+        "workExperience": 2,
         "years": 40
     },
     {
@@ -163,28 +163,28 @@
         "aboutDentist": "вузький спеціаліст",
         "comments": [
         ],
-        "contactsDentis": "+380509519977",
-        "firstName": "Анастасія",
+        "contactsDentis": "+380950174792",
+        "firstName": "Вікторія",
         "idOfDentistry": 3,
-        "lastName": "Довбуш",
-        "patronymic": "Іванова",
-        "photo": "Dovbush.PNG",
-        "specialization": "Стоматолог-ортопед",
-        "workExperience": 2,
+        "lastName": "Терентіва",
+        "patronymic": "Олегівна",
+        "photo": "Terentiva.PNG",
+        "specialization": "Стоматолог-пародонтолог",
+        "workExperience": 7,
         "years": 40
     },
     {
-        "aboutDentist": "вузький спеціаліст",
+        "aboutDentist": "головний стоматолог",
         "comments": [
         ],
-        "contactsDentis": "+380950174992",
-        "firstName": "Сергій",
+        "contactsDentis": "+380950574772",
+        "firstName": "Алла",
         "idOfDentistry": 3,
-        "lastName": "Головко",
-        "patronymic": "Юрійович",
-        "photo": "Golovko.PNG",
-        "specialization": "Стоматолог-ортопед",
-        "workExperience": 15,
+        "lastName": "Бабка",
+        "patronymic": "Юріївна",
+        "photo": "Babka.PNG",
+        "specialization": "Дитячий Стоматолог",
+        "workExperience": 4,
         "years": 40
     },
     {
@@ -202,15 +202,15 @@
         "years": 40
     },
     {
-        "aboutDentist": "головний стоматолог",
+        "aboutDentist": "вузький спеціаліст",
         "comments": [
         ],
-        "contactsDentis": "+380950134772",
-        "firstName": "Екатирина",
+        "contactsDentis": "+380508519977",
+        "firstName": "Куземка",
         "idOfDentistry": 2,
-        "lastName": "Крока",
-        "patronymic": "Миколаївна",
-        "photo": "Kroka.PNG",
+        "lastName": "Деніс",
+        "patronymic": "Іванович",
+        "photo": "Kuzemka.PNG",
         "specialization": "Стоматолог-ортопед",
         "workExperience": 5,
         "years": 40
@@ -230,17 +230,17 @@
         "years": 40
     },
     {
-        "aboutDentist": "вузький спеціаліст",
+        "aboutDentist": "головний стоматолог",
         "comments": [
         ],
-        "contactsDentis": "+380684556689",
-        "firstName": "Ігор",
+        "contactsDentis": "+380950134772",
+        "firstName": "Екатирина",
         "idOfDentistry": 1,
-        "lastName": "Іванов",
-        "patronymic": "Іванович",
-        "photo": "Ivanov.PNG",
+        "lastName": "Крока",
+        "patronymic": "Миколаївна",
+        "photo": "Kroka.PNG",
         "specialization": "Стоматолог-ортопед",
-        "workExperience": 2,
+        "workExperience": 5,
         "years": 40
     },
     {
@@ -272,17 +272,17 @@
         "years": 40
     },
     {
-        "aboutDentist": "головний стоматолог",
+        "aboutDentist": "вузький спеціаліст",
         "comments": [
         ],
-        "contactsDentis": "+380950574772",
-        "firstName": "Алла",
+        "contactsDentis": "+380684556689",
+        "firstName": "Ігор",
         "idOfDentistry": 2,
-        "lastName": "Бабка",
-        "patronymic": "Юріївна",
-        "photo": "Babka.PNG",
-        "specialization": "Дитячий Стоматолог",
-        "workExperience": 4,
+        "lastName": "Іванов",
+        "patronymic": "Іванович",
+        "photo": "Ivanov.PNG",
+        "specialization": "Стоматолог-ортопед",
+        "workExperience": 2,
         "years": 40
     },
     {
