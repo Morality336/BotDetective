@@ -57,6 +57,7 @@ Dentist& Dentist::operator=(Dentist& other)
     this->workExperience = other.workExperience;
     this->contactsDentist = other.contactsDentist;
     this->listComments = other.listComments;
+    this->idOfDentistry = other.idOfDentistry;
     return *this;
 }
 Comments::Comments(){

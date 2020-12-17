@@ -93,8 +93,7 @@ void MainWindow::OpenDentist(){
     if(!fileDoctors.open(QIODevice::ReadOnly|QFile::Text)){
         QMessageBox::warning(0, "Error", "Failed to open " + pathFileDentist);
     }
-    else
-    {
+    else {
         listDentist.clear();
         dateDentist = QJsonDocument::fromJson(QByteArray(fileDoctors.readAll()));
         dateDentistArr = QJsonValue(dateDentist.object().value("Doctors")).toArray();
@@ -136,7 +135,6 @@ void MainWindow::OpenDentist(){
             }
             listDentist.append(temp);
         }
-
 }
     fileDoctors.close();
     hashTableByName.clear();
@@ -332,7 +330,7 @@ void MainWindow::SearchByDentistry(QString SearchWord)
     }
 }
 
-QList<Dentist*> MainWindow::sortByRating(QList<Dentist*> *list)
+void MainWindow::sortByRating(QList<Dentist*> *list)
 {
         for (int i = 0; i < list->size() - 1; i++)
         {
@@ -348,61 +346,50 @@ QList<Dentist*> MainWindow::sortByRating(QList<Dentist*> *list)
                 }
             }
         }
-        return *list;
 }
-QList<Dentist*> MainWindow::sortByAscending(QList<Dentist *> *list)
+void MainWindow::sortByAscending(QList<Dentist *> *list)
 {
         for (int i = 0; i < list->size() - 1; i++)
         {
-            for (int j = 0; j < list->size() - i - 1; j++)
+            for (int j = 0; j < list->size() - 1; j++)
             {
-                int z = 0;
-                while (true)
-                {
-                    if (list->at(j)->getLastName().at(z).unicode() == list->at(j + 1)->getLastName().at(z).unicode())
-                    {
-                        z++;
-                    }
-                    else if(list->at(j)->getLastName().at(z).unicode() > list->at(j + 1)->getLastName().at(z).unicode())
-                    {
-                        Dentist* tmp = new Dentist;
-                        *tmp = *list->at(j);
-                        *list->at(j) = *list->at(j + 1);
-                        *list->at(j + 1) = *tmp;
-                        delete tmp;
+                for(int z = 0; z < list->at(j)->getLastName().size(); z++){
+                    if(list->at(j)->getLastName().at(z).unicode() > list->at(j+1)->getLastName().at(z).unicode()){
+                        Dentist *temp = new Dentist;
+                        *temp = *list->at(j);
+                        list->removeAt(j);
+                        list->insert(j+1,temp);
                         break;
                     }
+                    else if(list->at(j)->getLastName().at(z).unicode() == list->at(j+1)->getLastName().at(z).unicode())
+                        continue;
+                    else
+                        break;
                 }
             }
         }
-        return *list;
 }
-QList<Dentist*> MainWindow::sortByDescending(QList<Dentist*> *list)
+void MainWindow::sortByDescending(QList<Dentist*> *list)
 {
-        for (int i = list->size() - 1; i > 0; i++)
+    for (int i = 0; i < list->size() - 1; i++)
+    {
+        for (int j = 0; j < list->size() - 1; j++)
         {
-            for (int j = list->size() - 1; j > 0; j++)
-            {
-                int z = 0;
-                while (true)
-                {
-                    if (list->at(j)->getLastName().at(z).unicode() == list->at(j + 1)->getLastName().at(z).unicode())
-                    {
-                        z++;
-                    }
-                    else if(list->at(j)->getLastName().at(z).unicode() > list->at(j + 1)->getLastName().at(z).unicode())
-                    {
-                        Dentist* tmp = new Dentist;
-                        *tmp = *list->at(j);
-                        *list->at(j) = *list->at(j + 1);
-                        *list->at(j + 1) = *tmp;
-                        delete tmp;
-                        break;
-                    }
+            for(int z = 0; z < list->at(j)->getLastName().size(); z++){
+                if(list->at(j)->getLastName().at(z).unicode() < list->at(j+1)->getLastName().at(z).unicode()){
+                    Dentist *temp = new Dentist;
+                    *temp = *list->at(j);
+                    list->removeAt(j);
+                    list->insert(j+1,temp);
+                    break;
                 }
+                else if(list->at(j)->getLastName().at(z).unicode() == list->at(j+1)->getLastName().at(z).unicode())
+                    continue;
+                else
+                    break;
             }
         }
-        return *list;
+    }
 }
 
 void MainWindow::ShowDentist(QList<Dentist*> *temp)
