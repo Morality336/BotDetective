@@ -63,6 +63,15 @@ font: 14pt &quot;Arial&quot;;</string>
        </widget>
       </item>
       <item>
+       <widget class="QComboBox" name="SortBy">
+        <property name="styleSheet">
+         <string notr="true">color: black;
+background-color: rgb(199, 199, 199);
+font: 14pt &quot;Arial&quot;;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QTextBrowser" name="BotOut">
         <property name="maximumSize">
          <size>
@@ -98,7 +107,7 @@ p, li { white-space: pre-wrap; }
            <x>0</x>
            <y>0</y>
            <width>1120</width>
-           <height>477</height>
+           <height>439</height>
           </rect>
          </property>
         </widget>
