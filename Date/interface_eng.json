@@ -53,5 +53,8 @@
     "AllDentistry": "Dentistry",
     "ShowAll": "Show all",
     "ShowDentistFromSpecialization": "Show dentist from this specialization",
-    "Close": "Close"
+    "Close": "Close",
+    "SortByRating": "Sort by rating",
+    "SortByAscending": "Sort by last name (ascending)",
+    "SortByDescending": "Sort by last name (descending)"
 }

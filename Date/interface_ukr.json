@@ -53,5 +53,8 @@
     "AllDentistry": "Стоматології",
     "ShowAll": "Показати всі",
     "ShowDentistFromSpecialization": "Показати всіх дантистів цієї спеціалізації",
-    "Close": "Закрити"
+    "Close": "Закрити",
+    "SortByRating": "Сортувати за рейтингом",
+    "SortByAscending": "Сортувати за прізвищем (за зростанням)",
+    "SortByDescending": "Cортувати за прізвищем (за спаданням)"
 }
