@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    pathFileDentist = "../BotDetective/Date/dentist_eng.json";
+    pathFileDentist = "../BotDetective-main/Date/dentist_eng.json";
     pathFileDentistry = ":/Date/Date/dentistry_eng.json";
     pathFileSpec = ":/Date/Date/spec_eng.json";
     pathInterface = ":/Date/Date/interface_eng.json";
@@ -185,10 +185,14 @@ void MainWindow::OpenInterface(){
     else{
         ui->BotOut->clear();
         ui->SearchBy->clear();
+        ui->SortBy->clear();
         interface = QJsonDocument::fromJson(QByteArray(fileInterface.readAll()));
         ui->SearchBy->addItem(interface.object().value("SearchBySurname").toString());
         ui->SearchBy->addItem(interface.object().value("SearchBySpecialization").toString());
         ui->SearchBy->addItem(interface.object().value("SearchByDentistry").toString());
+        ui->SortBy->addItem(interface.object().value("SortByRating").toString());
+        ui->SortBy->addItem(interface.object().value("SortByAscending").toString());
+        ui->SortBy->addItem(interface.object().value("SortByDescending").toString());
         ui->BotOut->setAlignment(Qt::AlignLeft);
         QTime cur = QTime::currentTime();
         if(cur.hour() >= 6 && cur.hour() <= 12)
@@ -249,7 +253,14 @@ void MainWindow::SearchByName(QString SearchWord)
         }
         else
         {
-            sort(&temp);
+            switch (ui->SortBy->currentIndex()) {
+                case 0: sortByRating(&temp);
+                break;
+                case 1 : sortByAscending(&temp);
+                break;
+                case 2: sortByDescending(&temp);
+                break;
+            }
             ShowDentist(&temp);
 
         }
@@ -273,7 +284,14 @@ void MainWindow::SearchBySpecialization(QString SearchWord)
         }
         else
         {
-            sort(&temp);
+            switch (ui->SortBy->currentIndex()) {
+                case 0: sortByRating(&temp);
+                break;
+                case 1 : sortByAscending(&temp);
+                break;
+                case 2: sortByDescending(&temp);
+                break;
+            }
             ShowDentist(&temp);
         }
     }
@@ -297,7 +315,14 @@ void MainWindow::SearchByDentistry(QString SearchWord)
         else
         {
 
-                sort(&temp);
+            switch (ui->SortBy->currentIndex()) {
+                case 0: sortByRating(&temp);
+                break;
+                case 1 : sortByAscending(&temp);
+                break;
+                case 2: sortByDescending(&temp);
+                break;
+            }
                 ShowDentist(&temp);
         }
     }
@@ -307,7 +332,7 @@ void MainWindow::SearchByDentistry(QString SearchWord)
     }
 }
 
-QList<Dentist*> MainWindow::sort(QList<Dentist*> *list)
+QList<Dentist*> MainWindow::sortByRating(QList<Dentist*> *list)
 {
         for (int i = 0; i < list->size() - 1; i++)
         {
@@ -320,6 +345,60 @@ QList<Dentist*> MainWindow::sort(QList<Dentist*> *list)
                     *list->at(j) = *list->at(j + 1);
                     *list->at(j + 1) = *tmp;
                     delete tmp;
+                }
+            }
+        }
+        return *list;
+}
+QList<Dentist*> MainWindow::sortByAscending(QList<Dentist *> *list)
+{
+        for (int i = 0; i < list->size() - 1; i++)
+        {
+            for (int j = 0; j < list->size() - i - 1; j++)
+            {
+                int z = 0;
+                while (true)
+                {
+                    if (list->at(j)->getLastName().at(z).unicode() == list->at(j + 1)->getLastName().at(z).unicode())
+                    {
+                        z++;
+                    }
+                    else if(list->at(j)->getLastName().at(z).unicode() > list->at(j + 1)->getLastName().at(z).unicode())
+                    {
+                        Dentist* tmp = new Dentist;
+                        *tmp = *list->at(j);
+                        *list->at(j) = *list->at(j + 1);
+                        *list->at(j + 1) = *tmp;
+                        delete tmp;
+                        break;
+                    }
+                }
+            }
+        }
+        return *list;
+}
+QList<Dentist*> MainWindow::sortByDescending(QList<Dentist*> *list)
+{
+        for (int i = list->size() - 1; i > 0; i++)
+        {
+            for (int j = list->size() - 1; j > 0; j++)
+            {
+                int z = 0;
+                while (true)
+                {
+                    if (list->at(j)->getLastName().at(z).unicode() == list->at(j + 1)->getLastName().at(z).unicode())
+                    {
+                        z++;
+                    }
+                    else if(list->at(j)->getLastName().at(z).unicode() > list->at(j + 1)->getLastName().at(z).unicode())
+                    {
+                        Dentist* tmp = new Dentist;
+                        *tmp = *list->at(j);
+                        *list->at(j) = *list->at(j + 1);
+                        *list->at(j + 1) = *tmp;
+                        delete tmp;
+                        break;
+                    }
                 }
             }
         }
@@ -402,7 +481,7 @@ void MainWindow::on_actionEng_triggered()
     SaveDentist();
     QLabel *tmp = new QLabel();
     ui->scrollArea->setWidget(tmp);
-    pathFileDentist = "../BotDetective/Date/dentist_eng.json";
+    pathFileDentist = "../BotDetective-main/Date/dentist_eng.json";
     pathFileDentistry = ":/Date/Date/dentistry_eng.json";
     pathFileSpec = ":/Date/Date/spec_eng.json";
     pathInterface = ":/Date/Date/interface_eng.json";
@@ -417,7 +496,7 @@ void MainWindow::on_actionUkr_triggered()
     SaveDentist();
     QLabel *tmp = new QLabel();
     ui->scrollArea->setWidget(tmp);
-    pathFileDentist = "../BotDetective/Date/dentist_ukr.json";
+    pathFileDentist = "../BotDetective-main/Date/dentist_ukr.json";
     pathFileDentistry = ":/Date/Date/dentistry_ukr.json";
     pathFileSpec = ":/Date/Date/spec_ukr.json";
     pathInterface = ":/Date/Date/interface_ukr.json";
@@ -478,7 +557,14 @@ void MainWindow::on_actionDentists_triggered()
 {
     QList<Dentist*> temp;
     hashTableByName.searchAll(&temp);
-    sort(&temp);
+    switch (ui->SortBy->currentIndex()) {
+        case 0: sortByRating(&temp);
+        break;
+        case 1 : sortByAscending(&temp);
+        break;
+        case 2: sortByDescending(&temp);
+        break;
+    }
     ShowDentist(&temp);
 }
 

@@ -42,7 +42,9 @@ public:
     void SearchBySpecialization(QString SearchWord);
     void SearchByDentistry(QString SearchWord);
     void ShowDentist(QList<Dentist*> *temp);
-    QList<Dentist*> sort(QList<Dentist*> *list);
+    QList<Dentist*> sortByRating(QList<Dentist*> *list);
+    QList<Dentist*> sortByAscending(QList<Dentist*> *list);
+    QList<Dentist*> sortByDescending(QList<Dentist*> *list);
     void OpenSpec();
     void OpenDentist();
     void OpenDentistry();
