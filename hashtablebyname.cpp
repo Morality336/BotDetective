@@ -54,9 +54,6 @@ void HashTableByName::searchAll(QList<Dentist*> *tmp){
 
 void HashTableByName::clear()
 {
-    for(int i = 0; i < size; i++)
-    {
-        arr[i].key = "";
-        arr[i].listOfDentists.clear();
-    }
+    delete arr;
+    arr = new Node[size];
 }

@@ -1,12 +1,4 @@
 <RCC>
-    <qresource prefix="/Date">
-        <file>Date/dentistry_eng.json</file>
-        <file>Date/dentistry_ukr.json</file>
-        <file>Date/interface_eng.json</file>
-        <file>Date/interface_ukr.json</file>
-        <file>Date/spec_eng.json</file>
-        <file>Date/spec_ukr.json</file>
-    </qresource>
     <qresource prefix="/Images/Icon">
         <file>Icons/CommentsDentistIcon.png</file>
         <file>Icons/DetailedDentistIcon.png</file>

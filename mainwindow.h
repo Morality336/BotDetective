@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include <exception.h>
 #include <QMainWindow>
 #include <QJsonObject>
 #include <QJsonParseError>
@@ -8,6 +8,8 @@
 #include <QList>
 #include <QPair>
 #include <QJsonArray>
+#include "QtSql/QSqlDatabase"
+#include "QSqlQuery"
 #include "dentist.h"
 #include "dentistry.h"
 #include "hashtablebyname.h"
@@ -27,9 +29,6 @@ class MainWindow : public QMainWindow
     Q_OBJECT
     QJsonDocument dateDentist;
     QJsonArray dateDentistArr;
-
-    QJsonDocument dateDentistry;
-    QJsonArray dateDentistryArr;
 
     QJsonDocument dateSpec;
     QJsonArray dateSpecArr;

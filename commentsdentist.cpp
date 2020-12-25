@@ -1,6 +1,7 @@
 #include "commentsdentist.h"
 #include "ui_commentsdentist.h"
 #include "dentist.h"
+#include "exception.h"
 #include "QBoxLayout"
 #include "QTextBrowser"
 #include <QMessageBox>
@@ -20,15 +21,16 @@ void CommentsDentist::sendDentist(Dentist *temp, QJsonDocument &interface){
     this->interface = interface;
     this->currentDentist = temp;
     QPixmap pix(":/Images/ImageDentists/ImageDentists/" + currentDentist->getPhoto());
-    if (pix.isNull())
-    {
-       QPixmap noAvatarPix(":/Images/ImageDentists/ImageDentists/no-avatar.PNG");
-       ui->Photo->setPixmap(noAvatarPix.scaled(240,180));
+    try{
+        if (pix.isNull())
+        {
+            throw QString (":/Images/ImageDentists/ImageDentists/no-avatar.PNG");
+        }
     }
-    else
-    {
-        ui->Photo->setPixmap(pix.scaled(240, 180));
+    catch(QString path){
+        MyException ex(pix, path);
     }
+    ui->Photo->setPixmap(pix.scaled(240, 180));
     ui->FirstName->setText(interface.object().value("FirstName").toString() + ": " + currentDentist->getFirstName());
     ui->LastName->setText(interface.object().value("LastName").toString() + ": " + currentDentist->getLastName());
     ui->Patronymic->setText(interface.object().value("Patronymic").toString() + ": " + currentDentist->getPatronymic());
@@ -84,14 +86,14 @@ void CommentsDentist::countRating(){
 }
 void CommentsDentist::on_AddCommentBtn_clicked()
 {
-
+    try{
     if( ui->Rating->text() == "" || ui->Rating->text().at(0).unicode() < 48 || ui->Rating->text().at(0).unicode() > 53 ||  (ui->Rating->text().at(0).unicode() == 53 && ui->Rating->text().size() != 1))
     {
-        QMessageBox::warning(0, interface.object().value("Error").toString(),interface.object().value("ErrorRating").toString());
+        throw 2;
     }
     else if (ui->CommentatorName->text() == "")
     {
-        QMessageBox::warning(0, interface.object().value("Error").toString(),interface.object().value("ErrorCommentatorName").toString());
+        throw 3;
     }
     else{
         Comments *temp = new Comments();
@@ -105,5 +107,9 @@ void CommentsDentist::on_AddCommentBtn_clicked()
         addComment();
         countRating();
         QMessageBox::information(0, interface.object().value("Success").toString(),interface.object().value("SuccessAddComment").toString());
+    }
+    }
+    catch(int error){
+        MyException ex(error, interface);
     }
 }

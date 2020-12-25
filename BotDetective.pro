@@ -1,4 +1,4 @@
-QT       += core gui
+QT += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,6 +14,7 @@ SOURCES += \
     dentistry.cpp \
     detaileddentist.cpp \
     developers.cpp \
+    exception.cpp \
     hashtablebyname.cpp \
     hashtablebynameofdentistry.cpp \
     hashtablebyspecialization.cpp \
@@ -27,6 +28,7 @@ HEADERS += \
     dentistry.h \
     detaileddentist.h \
     developers.h \
+    exception.h \
     hashtablebyname.h \
     hashtablebynameofdentistry.h \
     hashtablebyspecialization.h \
