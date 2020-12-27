@@ -3,6 +3,20 @@
         "aboutDentist": "narrow specialist",
         "comments": [
         ],
+        "contactsDentis": "+380507519977",
+        "firstName": "Alexander",
+        "idOfDentistry": 3,
+        "lastName": "Mosenko",
+        "patronymic": "Ivanovich",
+        "photo": "mosenko.PNG",
+        "specialization": "Surgeon-Implantologist",
+        "workExperience": 5,
+        "years": 40
+    },
+    {
+        "aboutDentist": "narrow specialist",
+        "comments": [
+        ],
         "contactsDentis": "+380950174992",
         "firstName": "Sergey",
         "idOfDentistry": 1,
@@ -11,6 +25,39 @@
         "photo": "Golovko.PNG",
         "specialization": "Dentist-orthopedist",
         "workExperience": 15,
+        "years": 40
+    },
+    {
+        "aboutDentist": "narrow specialist",
+        "comments": [
+            {
+                "comment": "simple text",
+                "commentatorName": "text",
+                "rating": 4
+            }
+        ],
+        "contactsDentis": "+380684657689",
+        "firstName": "Oleg",
+        "idOfDentistry": 3,
+        "lastName": "Babka",
+        "patronymic": "Ivanovich",
+        "photo": "Gesuch.PNG",
+        "specialization": "Dentist-surgeon-implantologist",
+        "workExperience": 4,
+        "years": 40
+    },
+    {
+        "aboutDentist": "narrow specialist",
+        "comments": [
+        ],
+        "contactsDentis": "+380950184772",
+        "firstName": "Sergey",
+        "idOfDentistry": 4,
+        "lastName": "Cushnarenko",
+        "patronymic": "Petrovich",
+        "photo": "Cushnarenko.PNG",
+        "specialization": "Dentist-therapist",
+        "workExperience": 5,
         "years": 40
     },
     {
@@ -31,56 +78,14 @@
         "aboutDentist": "narrow specialist",
         "comments": [
         ],
-        "contactsDentis": "+380509519977",
-        "firstName": "Anastasia",
-        "idOfDentistry": 1,
-        "lastName": "Dovbush",
-        "patronymic": "Ivanova",
-        "photo": "Dovbush.PNG",
-        "specialization": "Dentist-orthopedist",
-        "workExperience": 2,
-        "years": 40
-    },
-    {
-        "aboutDentist": "narrow specialist",
-        "comments": [
-        ],
-        "contactsDentis": "+380507519977",
-        "firstName": "Alexander",
-        "idOfDentistry": 3,
-        "lastName": "Mosenko",
-        "patronymic": "Ivanovich",
-        "photo": "mosenko.PNG",
-        "specialization": "Surgeon-Implantologist",
-        "workExperience": 5,
-        "years": 40
-    },
-    {
-        "aboutDentist": "narrow specialist",
-        "comments": [
-        ],
-        "contactsDentis": "+380506519977",
-        "firstName": "Valentina",
+        "contactsDentis": "+380684666689",
+        "firstName": "Yan",
         "idOfDentistry": 4,
-        "lastName": "Raeva",
-        "patronymic": "Ivanova",
-        "photo": "Raeva.PNG",
-        "specialization": "Dentist-therapist",
-        "workExperience": 5,
-        "years": 40
-    },
-    {
-        "aboutDentist": "main dentist",
-        "comments": [
-        ],
-        "contactsDentis": "+380950134772",
-        "firstName": "Ekaterina",
-        "idOfDentistry": 1,
-        "lastName": "Kroka",
-        "patronymic": "Mykolaivna",
-        "photo": "Kroka.PNG",
-        "specialization": "dentist-orthopedist",
-        "workExperience": 5,
+        "lastName": "Kazimov",
+        "patronymic": "Ivanovich",
+        "photo": "Kazimov.PNG",
+        "specialization": "Dentist-orthopedist",
+        "workExperience": 0,
         "years": 40
     },
     {
@@ -95,6 +100,11 @@
                 "comment": "Very Well",
                 "commentatorName": "Vlad Primakov",
                 "rating": 4.1
+            },
+            {
+                "comment": "simple text",
+                "commentatorName": "text",
+                "rating": 4
             }
         ],
         "contactsDentis": "+380950674772",
@@ -125,28 +135,28 @@
         "aboutDentist": "narrow specialist",
         "comments": [
         ],
-        "contactsDentis": "+380950184772",
-        "firstName": "Sergey",
-        "idOfDentistry": 4,
-        "lastName": "Cushnarenko",
-        "patronymic": "Petrovich",
-        "photo": "Cushnarenko.PNG",
-        "specialization": "Dentist-therapist",
-        "workExperience": 5,
+        "contactsDentis": "+380684656689",
+        "firstName": "Anastasia",
+        "idOfDentistry": 1,
+        "lastName": "Vifak",
+        "patronymic": "Ivanova",
+        "photo": "Vifak.PNG",
+        "specialization": "Dentist-periodontist",
+        "workExperience": 4,
         "years": 40
     },
     {
-        "aboutDentist": "narrow specialist",
+        "aboutDentist": "main dentist",
         "comments": [
         ],
-        "contactsDentis": "+380684657689",
-        "firstName": "Oleg",
-        "idOfDentistry": 3,
-        "lastName": "Babka",
-        "patronymic": "Ivanovich",
-        "photo": "Gesuch.PNG",
-        "specialization": "Dentist-surgeon-implantologist",
-        "workExperience": 4,
+        "contactsDentis": "+380950134772",
+        "firstName": "Ekaterina",
+        "idOfDentistry": 1,
+        "lastName": "Kroka",
+        "patronymic": "Mykolaivna",
+        "photo": "Kroka.PNG",
+        "specialization": "dentist-orthopedist",
+        "workExperience": 5,
         "years": 40
     },
     {
@@ -181,28 +191,33 @@
         "aboutDentist": "narrow specialist",
         "comments": [
         ],
-        "contactsDentis": "+380684666689",
-        "firstName": "Yan",
+        "contactsDentis": "+380506519977",
+        "firstName": "Valentina",
         "idOfDentistry": 4,
-        "lastName": "Kazimov",
-        "patronymic": "Ivanovich",
-        "photo": "Kazimov.PNG",
-        "specialization": "Dentist-orthopedist",
-        "workExperience": 0,
+        "lastName": "Raeva",
+        "patronymic": "Ivanova",
+        "photo": "Raeva.PNG",
+        "specialization": "Dentist-therapist",
+        "workExperience": 5,
         "years": 40
     },
     {
         "aboutDentist": "narrow specialist",
         "comments": [
+            {
+                "comment": "simple text",
+                "commentatorName": "text",
+                "rating": 4
+            }
         ],
-        "contactsDentis": "+380684556689",
-        "firstName": "Igor",
+        "contactsDentis": "+380950174792",
+        "firstName": "Viktoria",
         "idOfDentistry": 2,
-        "lastName": "Ivanov",
-        "patronymic": "Ivanovich",
-        "photo": "Ivanov.PNG",
-        "specialization": "Dentist-orthopedist",
-        "workExperience": 2,
+        "lastName": "Terenteva",
+        "patronymic": "Olegovna",
+        "photo": "Terentiva.PNG",
+        "specialization": "Dentist-periodontist",
+        "workExperience": 7,
         "years": 40
     },
     {
@@ -234,6 +249,53 @@
         "years": 40
     },
     {
+        "aboutDentist": "narrow specialist",
+        "comments": [
+            {
+                "comment": "simple",
+                "commentatorName": "simple text",
+                "rating": 4
+            }
+        ],
+        "contactsDentis": "+380508519977",
+        "firstName": "Kuzemka",
+        "idOfDentistry": 2,
+        "lastName": "Denis",
+        "patronymic": "Ivanovich",
+        "photo": "Kuzemka.PNG",
+        "specialization": "Dentist-orthopedist",
+        "workExperience": 5,
+        "years": 40
+    },
+    {
+        "aboutDentist": "narrow specialist",
+        "comments": [
+        ],
+        "contactsDentis": "+380509519977",
+        "firstName": "Anastasia",
+        "idOfDentistry": 1,
+        "lastName": "Dovbush",
+        "patronymic": "Ivanova",
+        "photo": "Dovbush.PNG",
+        "specialization": "Dentist-orthopedist",
+        "workExperience": 2,
+        "years": 40
+    },
+    {
+        "aboutDentist": "narrow specialist",
+        "comments": [
+        ],
+        "contactsDentis": "+380684556689",
+        "firstName": "Igor",
+        "idOfDentistry": 2,
+        "lastName": "Ivanov",
+        "patronymic": "Ivanovich",
+        "photo": "Ivanov.PNG",
+        "specialization": "Dentist-orthopedist",
+        "workExperience": 2,
+        "years": 40
+    },
+    {
         "aboutDentist": "main doctor",
         "comments": [
         ],
@@ -245,48 +307,6 @@
         "photo": "Onipko.PNG",
         "specialization": "Surgeon-Implantologist",
         "workExperience": 8,
-        "years": 40
-    },
-    {
-        "aboutDentist": "narrow specialist",
-        "comments": [
-        ],
-        "contactsDentis": "+380684656689",
-        "firstName": "Anastasia",
-        "idOfDentistry": 1,
-        "lastName": "Vifak",
-        "patronymic": "Ivanova",
-        "photo": "Vifak.PNG",
-        "specialization": "Dentist-periodontist",
-        "workExperience": 4,
-        "years": 40
-    },
-    {
-        "aboutDentist": "narrow specialist",
-        "comments": [
-        ],
-        "contactsDentis": "+380950174792",
-        "firstName": "Viktoria",
-        "idOfDentistry": 2,
-        "lastName": "Terenteva",
-        "patronymic": "Olegovna",
-        "photo": "Terentiva.PNG",
-        "specialization": "Dentist-periodontist",
-        "workExperience": 7,
-        "years": 40
-    },
-    {
-        "aboutDentist": "narrow specialist",
-        "comments": [
-        ],
-        "contactsDentis": "+380508519977",
-        "firstName": "Kuzemka",
-        "idOfDentistry": 2,
-        "lastName": "Denis",
-        "patronymic": "Ivanovich",
-        "photo": "Kuzemka.PNG",
-        "specialization": "Dentist-orthopedist",
-        "workExperience": 5,
         "years": 40
     }
 ]
